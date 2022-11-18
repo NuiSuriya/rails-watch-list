@@ -13,11 +13,6 @@ class BookmarksController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
-
-    def show
-      @bookmark = Bookmark.find(params[:id])
-    end
-
   end
 
   private
