@@ -1,11 +1,18 @@
-<h1>My Lists</h1>
+<div class="container">
+  <div class="cover mt-3 d-flex align-items-center justify-content-center">
+    <div class="text-white text-center">
+      <h1>My fun movie world</h1>
+    </div>
+  </div>
 
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list)%></li>
+  <div class="bg-light mt-3 p-3">
+    <h2>My Lists</h2>
+    <ul>
+      <% @lists.each do |list| %>
+        <li><%= link_to list.name, list_path(list)%></li>
+      <% end %>
+    </ul>
+  </div>
 
-  <% end %>
-</ul>
-
-<%= link_to "Add a new list", new_list_path %>
-
+  <%= link_to "Add a new list", new_list_path %>
+</div>
