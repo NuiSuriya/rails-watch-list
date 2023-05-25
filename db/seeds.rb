@@ -10,12 +10,13 @@ require 'json'
 
 puts 'Cleaning up database'
 Movie.destroy_all
-puts 'Database clean'
+  puts 'Database clean'
 
 url = 'https://tmdb.lewagon.com/movie/top_rated'
 # 10.times do
 puts 'Importing movies'
 movies = JSON.parse(URI.open(url).read)['results']
+
 movies.each do |movie|
   puts "Creating #{movie['title']}"
   poster_url_base = 'https://image.tmdb.org/t/p/original'
